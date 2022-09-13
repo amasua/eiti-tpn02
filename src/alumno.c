@@ -1,12 +1,8 @@
 
-/** @file main.c
+/** @file alumno.c
  **
- ** @brief Plantilla de archivos fuente TPN02
+ ** @brief Codigo fuente de las funciones de alumno
  **
- ** Plantilla para los archivos de codigo fuente de prácticos de las 
- ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
- ** de Tiempo Real dictadas en de la Especialización en Integración de
- ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
@@ -18,7 +14,6 @@
  */
 
 /* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
 #include "alumno.h"
 #include <stdio.h>
 
@@ -36,17 +31,11 @@
 
 /* === Definiciones de funciones publicas ================================== */
 
-int main(void) {
-    static const struct alumno_s alumno = {
-        .apellido = "CALVO",
-        .nombre = "Julio",
-        .documento = "14.023.732"
-    };
-
-    nombre(&alumno);
-    return(0);
-
-}
+void nombre(const struct alumno_s * alumno) {
+    printf("Apellido del alumno: %s\r\n", alumno->apellido);
+    printf("Nombre del alumno: %s\r\n", alumno->nombre);
+    printf("Documento del alumno: %s\r\n", alumno->documento);
+};
 
 /* === Ciere de documentacion ============================================== */
 
